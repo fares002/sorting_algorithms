@@ -16,7 +16,7 @@ void m_compare(int *arr, size_t s, size_t st, int *n)
 	printf("Merging...\n");
 	printf("[left]: ");
 	print_array(arr + s, m - st);
-	prinf("[right]: ");
+	printf("[right]: ");
 	print_array(arr + m, st - m);
 	for (k = s; k < st; k++)
 		if (i < m && (j >= st || arr[i] <= arr[j]))
@@ -26,7 +26,7 @@ void m_compare(int *arr, size_t s, size_t st, int *n)
 		else
 			n[k] = arr[j++];
 	printf("[Done]: ");
-	print_array(n, s, st - s);
+	print_array(n + s, st - s);
 }
 /**
  * m_sort - sorts top down
