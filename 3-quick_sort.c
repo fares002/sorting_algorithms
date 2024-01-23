@@ -44,7 +44,7 @@ size_t pati(int *arr, ssize_t size, ssize_t low, ssize_t high)
  * @hi: high index
  * Return: void
  */
-void q_sort(int *array, size_t size, ssize_t lo, ssize hi)
+void q_sort(int *array, size_t size, ssize_t lo, ssize_t hi)
 {
 	if (lo < hi)
 	{
@@ -52,7 +52,7 @@ void q_sort(int *array, size_t size, ssize_t lo, ssize hi)
 
 		q_sort(array, size, lo, p - 1);
 		q_sort(array, size, p + 1, hi);
-
+	}
 }
 /**
  * quick_sort - quick sort
@@ -65,4 +65,4 @@ void quick_sort(int *array, size_t size)
 	if (!array || !size)
 		return;
 	q_sort(array, size, 0, size - 1);
-
+}
