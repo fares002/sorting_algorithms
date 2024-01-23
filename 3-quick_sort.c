@@ -62,7 +62,7 @@ void q_sort(int *array, size_t size, ssize_t lo, ssize hi)
  */
 void quick_sort(int *array, size_t size)
 {
-	if(!array || !size)
+	if (!array || !size)
 		return;
 	q_sort(array, size, 0, size - 1);
 
