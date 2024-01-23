@@ -15,13 +15,13 @@ void m_compare(int *arr, size_t s, size_t st, int *n)
 	j = m = (s + st) / 2;
 	printf("Merging...\n");
 	printf("[left]: ");
-	print_array(arr + s, m - st);
+	print_array(arr + s, m - s);
 	printf("[right]: ");
 	print_array(arr + m, st - m);
 	for (k = s; k < st; k++)
 		if (i < m && (j >= st || arr[i] <= arr[j]))
 		{
-			n[k] = arr[j++];
+			n[k] = arr[i++];
 		}
 		else
 			n[k] = arr[j++];
