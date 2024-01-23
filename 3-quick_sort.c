@@ -11,7 +11,7 @@ void swapping(int *arr, size_t s, int *x, int *y)
 {
 	if (*x != *y)
 	{
-		*x = *x + *b;
+		*x = *x + *y;
 		*y = *x - *y;
 		*x = *x - *y;
 		print_array((const int *)arr, s);
@@ -37,7 +37,7 @@ size_t pati(int *arr, ssize_t size, ssize_t low, ssize_t high)
 	return (a);
 }
 /**
- * quick_sort - quick sort
+ * q_sort - quick sort
  * @array: array
  * @size: array size
  * @lo: low index
@@ -51,7 +51,7 @@ void q_sort(int *array, size_t size, ssize_t lo, ssize hi)
 		size_t p = pati(array, size, lo, hi);
 
 		q_sort(array, size, lo, p - 1);
-		q_sort(array, size, p+ 1, hi);
+		q_sort(array, size, p + 1, hi);
 
 }
 /**
